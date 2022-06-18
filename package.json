@@ -21,7 +21,7 @@
   },
   "scripts": {
     "test": "node ./src/benchmark.js",
-    "start": "nodemon --inspect ./src/index.js"
+    "start": "node ./src/index.js"
   },
   "author": "Adrián Russo",
   "licence": "Alguna"
