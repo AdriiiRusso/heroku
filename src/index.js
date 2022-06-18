@@ -123,6 +123,10 @@ app.get('/fb-logout', (req, res) => {
     res.redirect('/api/usuario')
 })
 
+app.all("*", (_req, res) => {
+    res.status(404).json({"error": "Ruta inexistente"})
+})
+
 const server = app.listen(PORT, () => {
     logger.info(`Frontend: \t\t\t http://localhost:${PORT}/api/usuario`)
     logger.info(`Randoms en: \t\t\t http://localhost:${PORT}/test/randoms`)
