@@ -127,7 +127,7 @@ app.all("*", (_req, res) => {
     res.status(404).json({"error": "Ruta inexistente"})
 })
 
-const server = app.listen(PORT, () => {
+const server = app.listen(process.env.PORT, () => {
     logger.info(`Frontend: \t\t\t http://localhost:${PORT}/api/usuario`)
     logger.info(`Randoms en: \t\t\t http://localhost:${PORT}/test/randoms`)
     logger.info(`Información del sistema en: \t http://localhost:${PORT}/test/info`)
