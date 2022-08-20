@@ -6,7 +6,6 @@ function generateRandomNumbers(n) {
             Math.floor(Math.random() * 1000)
         )
     }
-    
     return randomNumbers;
 }
 
