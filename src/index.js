@@ -33,7 +33,7 @@ app.engine('hbs', engine({
 app.use(
     session({
         store: mongoStore.create({
-            mongoUrl: process.env.MONGO_URI,
+            mongoUrl: process.env.MONGODB,
             options: {
                 userNewParser: true,
                 useUnifiedTopology: true,
