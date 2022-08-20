@@ -74,7 +74,7 @@ app._router.stack.forEach(function (r) {
 
 const { PORT } = minimist(process.argv.slice(2), options);
 
-const server = app.listen(PORT, () => {
+const server = app.listen(process.env.PORT, () => {
     logger.info(`Frontend: \t\t\t http://localhost:${PORT}/api/usuario`)
     logger.info(`Randoms en: \t\t\t http://localhost:${PORT}/test/randoms`)
     logger.info(`Información del sistema en: \t http://localhost:${PORT}/test/info`)
