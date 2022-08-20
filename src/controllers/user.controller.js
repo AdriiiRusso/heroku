@@ -42,14 +42,21 @@ export async function logIn(req, res) {
         username: user,
         password: pass
     });
-
-    if (loggedUser) {
+    if (process.env.DUMMYUSER === user && process.env.DUMMYPASS === pass) {
         req.session.login=true;
         res.redirect('/api/usuario')
     } else {
         req.session.login=false;
         res.redirect('/api/usuario/login')
     }
+    /*
+    if (loggedUser) {
+        req.session.login=true;
+        res.redirect('/api/usuario')
+    } else {
+        req.session.login=false;
+        res.redirect('/api/usuario/login')
+    }*/
 }
 
 export async function homeView(req, res) {
